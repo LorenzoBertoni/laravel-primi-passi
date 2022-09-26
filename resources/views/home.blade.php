@@ -39,6 +39,15 @@
             color: #fff;
             text-align: center;
         }
+
+        main {
+            width: 70%;
+            margin: 100px auto;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
     </style>
 
 
@@ -56,5 +65,9 @@
             @endforeach
         </ul>
     </header>
+    
+    <main>
+        <img src="https://www.coine.it/wp-content/uploads/2022/03/laravel-featured.png" alt="Laravel Logo">
+    </main>
 </body>
 </html>
