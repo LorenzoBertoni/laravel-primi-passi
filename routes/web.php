@@ -13,6 +13,40 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//*route Home
 Route::get('/', function () {
-    return view('welcome');
-});
+    $firstMessage = 'Hello Laravel!';
+    $navLinks = [
+                    [
+                        'name' => 'About us',
+                        'url' => 'about-us'
+                    ],
+                    [
+                        'name' => 'Contacts',
+                        'url' => 'contacts'
+                    ],
+                    [
+                        'name' => 'Courses',
+                        'url' => 'courses'
+                    ],
+    ];
+
+    return view('home', [
+        'message' => $firstMessage,
+        'navLinks' => $navLinks
+    ]);
+})->name('home');
+
+//*routes del programma
+
+Route::get('/aboutUs', function () {
+    return view('aboutUs');
+})->name('about-us');
+
+Route::get('/contacts', function () {
+    return view('contacts');
+})->name('contacts');
+
+Route::get('/courses', function () {
+    return view('courses');
+})->name('courses');
